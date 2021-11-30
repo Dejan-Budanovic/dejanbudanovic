@@ -1,17 +1,51 @@
-* {
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-html {
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     font-size: 62.5%;
+    background-color: var(--black);
+    color: var(--white);
+    position: relative;
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    color: var(--orange); /*CHANGE*/
 }
 
-li {
-    list-style: none;
+button {
+    font-family: 'Oswald', sans-serif;
+    border: none;
 }
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }

@@ -1,0 +1,120 @@
+.portfolio-section {
+    background-color: var(--orange);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    h2 {
+        text-align: center;
+        font-size: clamp(2.5rem, 10vw, 3rem);
+        color: var(--darkblue);
+        line-height: 0;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+}
+
+.portfolio-card {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-image: linear-gradient(to top, var(--black) 0%, var(--white) 100%), url("/img/portfolio-screenshot.webp");
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem 0 0 0;
+    margin: 1rem;
+    width: 100%;
+    transition: transform 500ms ease;
+    &:hover,
+    &:focus-within {
+        transform: scale(1.03);
+        .portfolio-card__text-holder {
+            transform: translateY(0);
+            transition-delay: 500ms;
+            > *:not(h3){
+                opacity: 1;
+                transition: opacity 1s linear;
+                transition-delay: 1000ms;
+            }
+            h3 {
+                &::after {
+                    transform: scaleX(1);
+                }
+            }
+        }
+    }
+}
+
+.portfolio-card__text-holder {
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(
+        hsla(0, 0%, 100%, 0),
+        hsla(0, 0%, 0%, 1)
+        );
+    max-width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+    > *:not(h3) {
+        opacity: 0;
+        
+    }
+    h3 {
+        color: var(--white);
+        font-size: clamp(1rem, 1vw, 12rem);
+        letter-spacing: 0.1rem;
+        line-height: 1.9rem;
+        position: relative;
+        width: max-content;
+        &::after {
+            content: "";
+            position: absolute;
+            height: 4px;
+            width: calc(100% +var(--padding));
+            left: calc(var(--padding) * -1);
+            bottom: 0;
+            background: var(--orange);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 500ms ease;
+        }
+        
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        display: inline-block;
+        font-size: 1rem;
+        color: var(--white);
+        background-color: var(--orange);
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        &:hover,
+        &:focus {
+            color: var(--orange);
+            background-color: var(--white);
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*@media (hover){}*/

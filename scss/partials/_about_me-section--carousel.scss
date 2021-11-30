@@ -1,0 +1,82 @@
+.carousel {
+    position: relative;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel__slides {
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease;
+}
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel__image-holder {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.carousel__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background-color: transparent;
+    cursor: pointer;
+    img {
+        width: 40px;
+        filter: invert(59%) sepia(100%) saturate(445%) hue-rotate(350deg) brightness(100%) contrast(98%);
+        transition: all 300ms ease;
+        &:hover {
+            filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(318deg) brightness(100%) contrast(100%);
+        }
+    }
+}
+
+.carousel__button--left {
+    left: -50px;
+}
+
+.carousel__button--right {
+    right: -50px;
+}
+
+.carousel__navigation {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.carousel__indicator {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgba($color: #fff, $alpha: 0.5);
+    margin: 0 7px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover {
+        background: var(--orange);
+    }
+}
+
+.current-slide {
+    background: var(--orange);
+}
+
+.is-hidden {
+    display: none;
+}

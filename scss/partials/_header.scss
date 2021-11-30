@@ -1,116 +1,88 @@
 .main-header {
-    background-color: darkgray;
-    border-bottom:  1px solid #482ff7;
-    padding: 0.5rem 0;
-}
-
-/* LOGO */
-.logo-wrapper {
-    background-color: $logo-background;
-    border-radius: 50%;
-}
-
-.logo-text {
-    padding: 3rem 1.4rem;
-    font-family: "Audiowide", cursive;
-    color: $logo-text;
-    text-align: center;
-    line-height: 0.7;
-    span {
-        font-size: 0.5em;
+    > * {
+        justify-content: space-between;
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .logo-text {
-        padding: 1.8rem 0.7rem;
-        font-size: 1.3rem;
-    }
+.gap {
+    gap: var(--gap, 2rem);
 }
 
-/* LOGO END */
-
-/* MAIN NAVIGATION */
-.main-navigation {
-    padding: 1rem 1.5rem;
-}
-
-.main-navigation--hamburger {
+.mobile-nav-button {
     display: none;
 }
 
-.main-navigation--hamburger__bar {
-    display: block;
-    width: 2.5rem;
-    height: 0.3rem;
-    margin: 0.5rem auto;
-    transition: all 0.3 ease-in-out;
-    -webkit-transition: all 0.3 ease-in-out;
-    background-color: #101010;
-}
-
-.main-navigation--menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main-navigation--menu__item {
-    margin-left: 5rem;
-}
-
-.main-navigation--menu__item-link {
-    display: block;
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    font-family: "Audiowide", cursive;
-    font-size: 3rem;
-    font-weight: 400;
-    color: #475569;
-    &:hover {
-        color: #482ff7;
+.main-navigation {
+    align-items: flex-start;
+    z-index: 1000;
+    padding: 1rem;
+    a {
+        font-family: 'Julius Sans One', sans-serif;
+        font-size: clamp(1.5rem, 10vh, 1.8rem);
+        text-transform: uppercase;
+        /*transition: all 500ms ease;
+        &:hover {
+            font-size: 1.8rem;
+        }*/
     }
 }
 
-@media only screen and (max-width: 768px) {
-    .main-navigation--menu {
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .main-navigation {
+        --gap: 3em;
         position: fixed;
-        left: -100%;
-        top: 6.5rem;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        border-radius: 0.5rem;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 1rem 2.7rem rgba(0, 0, 0, 0.05);
-        &.active {
-            left: 0;
-        }
-    }
-    
-    .main-navigation--menu__item {
-        margin-left: 0;
-        padding: 2rem;
-        border-bottom: 1px solid #475569;
-        width: 100%;
+        inset: 0 0 0 30%;
+        background-color: hsla(0, 0%, 0%, 0.9);
+        padding: min(30rem, 10rem) 2em;
+        transform: translateX(100%);
+        transition:all 500ms ease-in-out;
     }
 
-    .main-navigation--hamburger {
+    .main-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    @supports (backdrop-filter: blur(0.5rem)) {
+        .main-navigation {
+            background-color: hsla(0, 0%, 100%, 0.1);
+            backdrop-filter: blur(1rem); /* ***** check Support*******/
+        }
+    }
+
+    .mobile-nav-button {
         display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        z-index: 9999;
+        width: 2.5rem;
+        background-color: transparent;
+        aspect-ratio: 1;
+        background-image: url("/img/nav-btn-open.svg");
+        filter: invert(59%) sepia(100%) saturate(445%) hue-rotate(350deg) brightness(100%) contrast(98%);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         cursor: pointer;
-        &.active .main-navigation--hamburger__bar:nth-child(2) {
-            opacity: 0;
-        }
-        &.active .main-navigation--hamburger__bar:nth-child(1) {
-            transform: translateY(0.8rem) rotate(45deg);
-        }
-        &.active .main-navigation--hamburger__bar:nth-child(3) {
-            transform:  translateY(-0.8rem) rotate(-45deg);
-        }
+        
     }
-
 }
 
-/* MAIN NAVIGATION EMD */
+
+
+.screen-reader-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}

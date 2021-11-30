@@ -1,0 +1,75 @@
+.contact-section {
+    h2 {
+        font-size: 3rem;
+        color: var(--orange);
+        text-align: center;
+    }
+}
+
+.contact-form__holder {
+    width: 100%;
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        label {
+            font-size: 1.3rem;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            color: var(--orange);
+        }
+        input, textarea {
+            padding: 8px;
+            font-size: 1.2rem;
+            font-family: 'Oswald', sans-serif;
+        }
+    }
+    .submit-button {
+        display: block;
+        font-size: 1.1rem;
+        color: var(--white);
+        background-color: var(--orange);
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 0.5rem 3rem;
+        margin: 0 auto;
+        border-radius: 0.3rem;
+        border: 3px solid var(--orange);
+        transition: all 500ms ease;
+        &:hover,
+        &:focus {
+            color: var(--orange);
+            background-color: var(--white);
+        }
+    }
+}
+.contact-links {
+    width: 100%;
+    text-align: center;
+    .contact-links__list {
+        display: inline-table;
+        margin: 0 auto;
+    }
+
+    .contact-link {
+        
+        margin-bottom: 1.5rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        a {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+                width: 30px;
+                filter: invert(59%) sepia(100%) saturate(445%) hue-rotate(350deg) brightness(100%) contrast(98%);
+                transition: all 300ms ease;
+                
+            }
+        }
+        &:hover {
+            filter: brightness(0) invert(1);
+        }
+    }
+    
+}

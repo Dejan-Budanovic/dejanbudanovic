@@ -1,0 +1,15 @@
+.main-footer {
+    background-color: var(--darkblue);
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    border-top: 0.3rem solid var(--orange);
+    margin-top: 5rem;
+    a {
+        color: var(--white);
+        &:hover {
+            color: var(--orange);
+        }
+    }
+}

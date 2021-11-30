@@ -8,39 +8,193 @@
     <link rel="stylesheet" href="scss/main.css">
 </head>
 <body>
-    <!-- 8ad0a9 audiwide  4b4b4c-->
     <!-- Main Header -->
     <header class="main-header">
-        <!-- Container -->
-        <div class="container flex-space-between">
-            <!-- Logo -->
-            <a href="#">
-                <div class="logo-wrapper">
-                    <h1 class="logo-text">Dejan<br><span>Budanović</span></h1>
-                </div>
-            </a>
-            <!-- Logo END -->
-            <!-- Main Navigation Bar -->
-            <nav class="main-navigation">
-                <ul class="main-navigation--menu">
-                    <li class="main-navigation--menu__item"><a class="main-navigation--menu__item-link" href="#">Home</a></li>
-                    <li class="main-navigation--menu__item"><a class="main-navigation--menu__item-link" href="#">About</a></li>
-                    <li class="main-navigation--menu__item"><a class="main-navigation--menu__item-link" href="#">Portfolio</a></li>
-                    <li class="main-navigation--menu__item"><a class="main-navigation--menu__item-link" href="#">Contact</a></li>
-                </ul>
-                <!-- Hamburger Menu Button -->
-                <div class="main-navigation--hamburger">
-                    <span class="main-navigation--hamburger__bar"></span>
-                    <span class="main-navigation--hamburger__bar"></span>
-                    <span class="main-navigation--hamburger__bar"></span>
-                </div>
-                <!-- Hamburger Menu Button END -->
-            </nav>
-            <!-- Main Navigation Bar END -->
+        <div class="container flex">
+            <!-- Main Header__Logo -->
+        <a href="#"><h1>Logo</h1></a>
+        <!-- Main Header__Logo END -->
+        <!-- Hamburger Button -->
+        <button class="mobile-nav-button">
+            <span class="screen-reader-only">Menu</span>
+        </button>
+        <!-- Hamburger Button END -->
+        <!-- Main Navigation -->
+        <nav>
+            <ul class="list-reset flex gap  main-navigation" id="main-navigation" data-visible="false">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Main Navigation END -->
         </div>
-        <!-- Container END -->
     </header>
-    <!-- Main Header  END -->
+    <!-- Main Header END -->
+    <main>
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <div class="container flex intro-section__article-holder">
+                <!-- Intro Article -->
+                <article class="col-1-2 intro-article">
+                    <h2>Hello World</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus excepturi quam suscipit vel est officia quidem pariatur. Eligendi, harum <a href="#">about me</a>.</p>
+                    <button>View my Porfolio </button>
+                </article>
+                <!-- Intro Article END -->
+                <!-- Intro Image Holder -->
+                <div class="intro-img-holder col-1-2">
+                    <img src="img/main-bkg-1.webp" alt="A photo of Dejan Budanovic">
+                </div>
+                <!-- Intro Image Holder END -->
+            </div>
+        </section>
+        <!-- Intro Section END -->
+        <div class="container">
+            <!-- Portfolio Section -->
+        <section class="portfolio-section">
+            <h2>Portfolio</h2>
+            <!--Portfolio Cards Holder -->
+            <div class="flex">
+                <!-- Portfolio Card -->
+                <div class="col-1-4 portfolio-card">
+                    <!-- Portfolio Card__Text-Holder -->
+                    <div class="portfolio-card__text-holder">
+                        <h3>Portfolio Website</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, totam.</p>
+                        <button>View more</button>
+                    </div>
+                 <!-- Portfolio Card__Text-Holder END -->
+                </div>
+                <!-- Portfolio Card END -->
+                <!-- Portfolio Card -->
+                <div class="col-1-4 portfolio-card">
+                    <!-- Portfolio Card__Text-Holder -->
+                    <div class="portfolio-card__text-holder">
+                        <h3>Portfolio Website</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, totam.</p>
+                        <button>View more</button>
+                    </div>
+                 <!-- Portfolio Card__Text-Holder END -->
+                </div>
+                <!-- Portfolio Card END -->
+                <!-- Portfolio Card -->
+                <div class="col-1-4 portfolio-card">
+                    <!-- Portfolio Card__Text-Holder -->
+                    <div class="portfolio-card__text-holder">
+                        <h3>Portfolio Website</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, totam.</p>
+                        <button>View more</button>
+                    </div>
+                 <!-- Portfolio Card__Text-Holder END -->
+                </div>
+                <!-- Portfolio Card END -->
+                <!-- Portfolio Card -->
+                <div class="col-1-4 portfolio-card">
+                    <!-- Portfolio Card__Text-Holder -->
+                    <div class="portfolio-card__text-holder">
+                        <h3>Portfolio Website</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, totam.</p>
+                        <button>View more</button>
+                    </div>
+                 <!-- Portfolio Card__Text-Holder END -->
+                </div>
+                <!-- Portfolio Card END -->
+            </div>
+            <!--Portfolio Cards Holder END -->
+        </section>
+        <!-- Portfolio Section END -->
+        </div>
+        <!-- About Me Section -->
+        <section class="about-me-section">
+            <h2>About me</h2>
+            <div class="container flex flex-gap">
+                <!-- Carousel -->
+            <div class="carousel col-1-2">
+                <button class="carousel__button carousel__button--left is-hidden">
+                    <img src="img/chevron-compact-left.svg" alt="">
+                </button>
+                <!-- Carousel Image Holder -->
+                <div class="carousel__image-holder">
+                    <ul class="carousel__slides list-reset">
+                        <li class="carousel__slide current-slide">
+                            <img loading="lazy" class="carousel__image" src="img/dejan-budanovic-about-me-1.webp" alt="">
+                        </li>
+                        <li class="carousel__slide">
+                            <img loading="lazy" class="carousel__image" src="img/dejan-budanovic-about-me-2.webp" alt="">
+                        </li>
+                        <li class="carousel__slide">
+                            <img loading="lazy" class="carousel__image" src="img/dejan-budanovic-about-me-3.webp" alt="">
+                        </li>
+                        <li class="carousel__slide">
+                            <img loading="lazy" class="carousel__image" src="img/dejan-budanovic-about-me-4.webp" alt="">
+                        </li>
+                    </ul>
+                </div>
+                <!-- Carousel Image Holder END -->
+                <button class="carousel__button carousel__button--right">
+                    <img src="img/chevron-compact-right.svg" alt="">
+                </button>
+                <div class="carousel__navigation">
+                    <button class="carousel__indicator current-slide"></button>
+                    <button class="carousel__indicator"></button>
+                    <button class="carousel__indicator"></button>
+                    <button class="carousel__indicator"></button>
+                </div>
+            </div>
+            <!-- Carousel END -->
+            <!-- About Me Article -->
+            <article class="about-me-article col-1-2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate maxime voluptatibus ratione minus quisquam optio non porro voluptates obcaecati exercitationem asperiores aut, nobis eveniet quos deserunt aliquid ad earum corporis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae deleniti asperiores praesentium, numquam ab necessitatibus ex? Obcaecati placeat non dicta impedit quaerat qui eum, doloremque, blanditiis modi numquam praesentium repudiandae?</p>
+            </article>
+            <!-- About Me Article END -->
+            </div>
+        </section>
+        <!-- About Me Section END -->
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>Contact Me</h2>
+            <!-- Contact Form -->
+            <div class="container flex flex-gap">
+                <div class="contact-form__holder col-1-2">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">e-Mail</label>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Message</label>
+                            <textarea name="" id="" cols="30" rows="6"></textarea>
+                        </div>
+                        <input class="submit-button" type="submit" value="Send">
+                    </form>
+                </div>
+                <!-- Contact Form END -->
+                <!-- Contatct Links -->
+                <div class="contact-links col-1-2">
+                    <ul class="list-reset contact-links__list">
+                        <li class="contact-link"><a href="mailto:contact@dejanbudanovic.com"><img src="img/envelope.svg" alt=""> contact@dejanbudanovic.com</a></li>
+                        <li class="contact-link"><a href="tel:+381655374264"><img src="img/phone.svg" alt=""> +381655374264</a></li>
+                        <li class="contact-link"><a href="https://github.com/Dejan-Budanovic" target="_blank" rel="noopener noreferrer"><img src="img/github.svg" alt=""> GitHub</a></li>
+                    </ul>
+                </div>
+                <!-- Contatct Links END -->
+            </div>
+        </section>
+        <!-- Contact Section END -->
+    </main>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <small>&copy; <a href="#">dejanbudanovic.com</a> 2021.</small>
+        </div>
+    </footer>
+    <!-- Main Footer END -->
     <noscript><div style="border: 1px solid purple; padding: 10px">
         <span style="color:red">JavaScript is not enabled!</span>
       </div></noscript>

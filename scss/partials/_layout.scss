@@ -1,14 +1,27 @@
 .container {
-    padding: 0 1rem;
-    @media  screen and (min-width: 768px) {
-        padding: 0 2rem;
-    }
+    width: 90%; /*CHANGE*/
+    margin: 0 auto;
 }
 
-
-.flex-space-between {
+.flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
+.col-1-2 {
+    max-width: 50%;
+}
+.col-1-4 {
+    max-width: 25%;
+}
+
+@media screen and (max-width: 768px) {
+    .flex {
+        flex-direction: column;
+    }
+    .col-1-2,
+    .col-1-4 {
+        max-width: 100%;
+    }
+    
+}
